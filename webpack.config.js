@@ -3,7 +3,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 var devMode = 'development'
 
-
 module.exports = {
   entry: './app/index.js',
   output: {
@@ -19,7 +18,9 @@ module.exports = {
       {
         test: /\.(s*)css$/,
         use: [
-          devMode !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          devMode !== 'production'
+            ? 'style-loader'
+            : MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
         ]
@@ -31,7 +32,7 @@ module.exports = {
       template: 'app/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'index.css',
+      filename: 'index.css'
     })
   ],
   mode: 'development'
