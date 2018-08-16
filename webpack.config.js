@@ -1,7 +1,7 @@
-var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var MiniCssExtractPlugin = require('mini-css-extract-plugin')
-var devMode = 'development'
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var devMode = 'development';
 
 module.exports = {
   entry: './app/index.js',
@@ -36,4 +36,4 @@ module.exports = {
     })
   ],
   mode: 'development'
-}
+};
